@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title><%=title%></title>
+    <link rel="stylesheet" href="CSS/home.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>TODO App</h1>
+      <hr />
+      <form action="/create_Todo" method="post">
+        <div class="description">
+          <label for="description">DESCRIPTION</label>
+          <input
+            type="text"
+            name="description"
+            placeholder="what to need to do?"
+            required
+          />
+        </div>
+        <hr />
+        <div class="category_due-date">
+          <div class="category">
+            <label for="category-name">CATEGORY</label>
+            <select name="category" id="category-name" required>
+              <option name="category">Choses a Category</option>
+              <option name="category">Personal</option>
+              <option name="category">Work</option>
+              <option name="category">School</option>
+              <option name="category">Other</option>
+            </select>
+          </div>
+          <div class="vLine"></div>
+          <div class="due_date">
+            <label for="date">DUE DATE</label>
+            <input type="date" name="date" required />
+          </div>
+        </div>
+        <hr />
+        <div class="btn">
+          <button type="submit" class="add">
+            <i class="fa-light fa-plus"></i> ADD TASK
+          </button>
+          <!-- <button type="submit" class="delete">
+            <i class="fa-solid fa-trash-can"></i>DELETE TASKS
+          </button> -->
+        </div>
+      </form>
+      <hr />
+      <%for(let i of todo_list){%>
+      <ul class="todo_ul">
+        <li class="todo_list">
+          <div class="descri">
+            <div class="delete-checkbox">
+              <a href="/delete-task/?id=<%=i.id%>">
+                <input type="checkbox" name="" id="" />
+              </a>
+            </div>
+
+            <p class="des"><%=i.description%></p>
+            <div class="delete-button">
+              <a href="/delete-task/?id=<%=i.id%>">
+                <button type="button">
+                  <i class="fa-solid fa-trash-can"></i></button
+              ></a>
+            </div>
+          </div>
+          <div class="date">
+            <p class="d-date">
+              <i class="fa-solid fa-calendar-days"></i><%=i.due_date%>
+            </p>
+            <p class="cate"><%=i.category%></p>
+          </div>
+        </li>
+        <hr />
+      </ul>
+      <%}%>
+    </div>
+    <script type="text/javascript" src="JS/home.js"></script>
+  </body>
+</html>

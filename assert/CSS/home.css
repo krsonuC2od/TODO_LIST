@@ -1,0 +1,143 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+.container {
+  height: 95vh;
+  width: 50vw;
+  margin-left: 25%;
+  background-color: white;
+  /* border: 2px solid gray; */
+}
+h1 {
+  text-align: center;
+  color: gray;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  
+}
+
+.description input {
+  border: none;
+}
+.description input:focus {
+  outline: none;
+}
+.category_due-date{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+ 
+}
+.category{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#category-name{
+  border: none;
+}
+#category-name:focus{
+  outline: none;
+}
+.vLine{
+  border: 1px solid ;
+  height: 50px;
+}
+.due_date{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+ 
+}
+.due_date input {
+  border: none;
+}
+.due_date input:focus {
+  outline: none;
+}
+.due_date label{
+  float: left;
+  
+}
+.btn{
+ margin-left: 25%;
+  
+}
+.add{
+padding: 10px;
+ background-color: gray;
+ color: white;
+ cursor: pointer;
+ border-radius: 10px;
+ margin-left: 20%;
+
+}
+.add i{
+  margin-right: 10px;
+  font-size: 20px;
+}
+.delete{
+padding: 10px;
+ background-color: red;
+ color:white;
+ cursor: pointer;
+ border-radius: 10px;
+ margin-right: 20%;
+ 
+}
+.delete i{
+  margin-right: 10px;
+  font-size: large;
+}
+
+
+.todo_list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border-bottom: 1px solid; */
+}
+.descri{
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+}
+.descri button{
+  color: brown;
+  cursor: pointer;
+  margin-right: 40px;
+}
+.descri input{
+cursor: pointer;
+margin-top: 25px;
+}
+.des{
+  margin-left: 20px;
+  font-size: 20px;
+}
+.date{
+  display: flex;
+  color: gray;
+  justify-content: space-between;
+}
+.d-date{
+  /* margin-left: 35px; */
+  color: black;
+}
+
+.cate{
+  margin-right: 40px;
+  background-color: blueviolet;
+  color: black;
+  border: 1px solid;
+  padding: 5px;
+ 
+}
+
+
